@@ -1,6 +1,6 @@
-# Genetic-Transmission-Of-Disease-Prediction-Using-random-Forest
-This project uses a Random Forest classification model to predict the likelihood of genetic disease transmission based on genomic and clinical features. It leverages machine learning to assist in early diagnosis and risk assessment for inherited disorders.
 # 🧬 Genetic Transmission of Disease Prediction Using Random Forest
+This project uses a Random Forest classification model to predict the likelihood of genetic disease transmission based on genomic and clinical features. It leverages machine learning to assist in early diagnosis and risk assessment for inherited disorders.
+
 
 This project aims to predict the transmission of genetic diseases using machine learning, specifically the **Random Forest** classification algorithm. It uses genomic and clinical features to classify whether a genetic disorder may be inherited, helping in early diagnosis and preventive care.
 
