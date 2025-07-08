@@ -12,11 +12,6 @@ This project aims to predict the transmission of genetic diseases using machine 
 - [Dataset Description](#dataset-description)
 - [Model and Approach](#model-and-approach)
 - [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [How to Run](#how-to-run)
-- [Results and Evaluation](#results-and-evaluation)
-- [Future Improvements](#future-improvements)
-- [License](#license)
 
 ---
 
