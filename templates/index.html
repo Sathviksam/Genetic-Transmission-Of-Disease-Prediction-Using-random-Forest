@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Genetic Disease Transmission Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-image: url('https://geneticeducation.co.in/wp-content/uploads/2024/03/DNA-methylation-min-1024x536.png'); /* DNA-style pattern */
+            background-color: #e6f0f8; /* fallback */
+            background-repeat: repeat;
+            background-size: auto;
+            color: #333;
+        }
+
+        form {
+            max-width: 700px;
+            margin: auto;
+            background-color: lab(46.32% 11.2 4.27 / 0.902); /* Semi-transparent */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            color: #fff;
+        }
+
+        form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="/predict">
+        <h2>Genetic Disease Transmission Prediction</h2>
+
+    
+        <label>Patient Age:</label>
+        <input type="text" name="Patient Age" required>
+        
+
+        <small>Enter 0 for No, 1 for Yes</small>
+        <label>Genes in mother's side:</label>
+        <input type="text" name="Genes in mother's side" required>
+
+        <small>Enter 0 No, 1 Yes</small>
+        <label>Inherited from father:</label>
+        <input type="text" name="Inherited from father" required>
+
+        <small>Enter 0 If not inherited mother's gene, 1 for If inherited mother's gene</small>
+        <label>Maternal gene:</label>
+        <input type="text" name="Maternal gene" required>
+
+        <small>Enter 0 If not inherited father's gene, 1 If  inherited father's gene</small>
+        <label>Paternal gene:</label>
+        <input type="text" name="Paternal gene" required>
+
+        <small>Enter 0 for Dead, 1 for Alive</small>
+        <label>Status:</label>
+        <input type="text" name="Status" required>
+
+        <small>Newborns (0–1 month): 30–60 breaths/min,Infants (1–12 months): 30–50 breaths/min,Toddlers (1–3 years): 24–40 breaths/min,
+            Preschoolers (3–6 years): 22–34 breaths/min,School-age children (6–12 years): 18–30 breaths/min,Adolescents (12–18 years): 12–20 breaths/min</small>
+        <label>Respiratory Rate (breaths/min):</label>
+        <input type="text" name="Respiratory Rate (breaths/min)" required>
+
+        <ul style="margin-top: 5px; padding-left: 16px;">
+            <li><b>Newborn:</b> 100–180 bpm</li>
+            <li><b>Infant:</b> 100–160 bpm</li>
+            <li><b>Toddler:</b> 90–150 bpm</li>
+            <li><b>Preschool:</b> 80–140 bpm</li>
+            <li><b>School-age:</b> 70–120 bpm</li>
+            <li><b>Teen:</b> 60–100 bpm</li>
+            <li><b>Adult:</b> 60–100 bpm</li>
+        </ul>
+        <label>Heart Rate (rates/min):</label>
+        <input type="text" name="Heart Rate (rates/min)" required>
+
+        
+        <small>Enter 0 for Yes, 1 for No</small>
+        <label>Follow-up:</label>
+        <input type="text" name="Follow-up" required>
+
+        <small>Enter 0 for Female, 1 for Male</small>
+        <label>Gender:</label>
+        <input type="text" name="Gender" required>
+        
+        <small>Enter 0 for No, 1 for Yes</small>
+        <label>Birth asphyxia:</label>
+        <input type="text" name="Birth asphyxia" required>
+
+        <small>Enter 0 for No, 1 for Yes</small>
+        <label>Autopsy shows birth defect (if applicable):</label>
+        <input type="text" name="Autopsy shows birth defect (if applicable)" required>
+         
+        <small>Only for Females(Enter 0 for No, 1 for Yes)</small>
+        <label>Folic acid details (peri-conceptional):</label>
+        <input type="text" name="Folic acid details (peri-conceptional)" required>
+
+        <label>H/O serious maternal illness:</label>
+        <input type="text" name="H/O serious maternal illness" required>
+
+        <label>H/O radiation exposure (x-ray):</label>
+        <input type="text" name="H/O radiation exposure (x-ray)" required>
+
+        <label>H/O substance abuse:</label>
+        <input type="text" name="H/O substance abuse" required>
+
+        <label>Assisted conception IVF/ART:</label>
+        <input type="text" name="Assisted conception IVF/ART" required>
+
+        <label>History of anomalies in previous pregnancies:</label>
+        <input type="text" name="History of anomalies in previous pregnancies" required>
+
+        <label>No. of previous abortion:</label>
+        <input type="text" name="No. of previous abortion" required>
+
+        <label>Birth defects:</label>
+        <input type="text" name="Birth defects" required>
+
+        <label>Blood test result:</label>
+        <input type="text" name="Blood test result" required>
+
+        <label>Disorder Subclass:</label>
+        <input type="text" name="Disorder Subclass" required>
+
+        <label>Symptom Count:</label>
+        <input type="text" name="Symptom Count" required>
+
+        <label>Total Blood Cell Count:</label>
+        <input type="text" name="Total Blood Cell Count" required>
+
+        <label>Combined_disorder:</label>
+        <input type="text" name="Combined_disorder" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
